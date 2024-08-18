@@ -1,4 +1,5 @@
 <?php  
+    namespace myInfo1;
     class myInfo {
         public $name = "Asif Abir";
         protected $myDaughter = "Amrin";
