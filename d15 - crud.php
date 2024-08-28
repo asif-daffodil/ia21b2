@@ -33,12 +33,17 @@
         <th>Student ID</th>
         <th>Student Name</th>
         <th>Student City</th>
+        <th>Actions</th>
     </tr>
     <?php while($row = $select->fetch_object()){ ?>
         <tr>
             <td><?= $row->id; ?></td>
             <td><?= $row->name; ?></td>
             <td><?= $row->city; ?></td>
+            <td>
+                <a href="./d15 - crud.php?editId=<?= $row->id; ?>">Edit</a>
+                <a href="./d15 - crud.php?deleteId=<?= $row->id; ?>">Delete</a>
+            </td>
         </tr>
     <?php } ?>
 </table>
