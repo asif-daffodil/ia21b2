@@ -43,8 +43,11 @@
                     <button type="submit" class="btn btn-primary" name="login">Log in</button>
                 </form>
                 <!-- don't have account? -->
-                <div class="mt-3 small">
+                <div class="my-3 small">
                 Don't have an account? <a href="./register.php">Register Here</a>
+                </div>
+                <div class="small">
+                    <a href="./forgot-password.php">Forgot Password?</a>
                 </div>
             </div>
         </div>

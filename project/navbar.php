@@ -18,11 +18,12 @@
         <?php if (isset($_SESSION['user'])) { ?>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="./assets/images/<?= !empty($_SESSION['user']['image']) ? $_SESSION['user']['image'] : "profile_picture.png" ?>" alt="" class="img-fluid me-1 d-inline" style="height:40px; width:40px; object-fit: cover">
+            <img src="./assets/images/<?= !empty($_SESSION['user']['image']) ? $_SESSION['user']['image'] : "profile_picture.png" ?>" alt="" class="img-fluid me-1 d-inline rounded-circle" style="height:40px; width:40px; object-fit: cover">
               <?= isset($_SESSION['user']) ? explode(" ", $_SESSION['user']['name'])[0] : 'Unknown user' ?>
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="./update-profile.php">Update Profile</a></li>
+              <li><a class="dropdown-item" href="./profile-picture.php">Profile Picture</a></li>
               <li><a class="dropdown-item" href="./change-password.php">Change Password</a></li>
               <li>
                 <hr class="dropdown-divider">
@@ -32,10 +33,10 @@
           </li>
         <?php } else { ?>
           <li class="nav-item">
-            <a class="nav-link" href="./login.php">Log in</a>
+            <a class="nav-link" href="./login.php" style="line-height: 40px">Log in</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./register.php">Register</a>
+            <a class="nav-link" href="./register.php" style="line-height: 40px">Register</a>
           </li>
         <?php } ?>
       </ul>
