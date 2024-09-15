@@ -278,3 +278,7 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+input[type="text"], input[type="password"], input[type="email"], textarea {
+    color: #fff !important;
+}
