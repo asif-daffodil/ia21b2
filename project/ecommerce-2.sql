@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 15, 2024 at 10:34 AM
+-- Generation Time: Sep 23, 2024 at 10:34 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -39,7 +39,15 @@ CREATE TABLE `brands` (
 INSERT INTO `brands` (`id`, `name`) VALUES
 (1, 'Apple'),
 (2, 'TVS'),
-(3, 'Arong');
+(3, 'Arong'),
+(5, 'Bata'),
+(6, 'Tata'),
+(7, 'Apex'),
+(8, 'BMW'),
+(9, 'Toyota'),
+(10, 'Samsung'),
+(11, 'Nokia'),
+(12, 'Kakuly Farniture');
 
 -- --------------------------------------------------------
 
@@ -58,7 +66,25 @@ CREATE TABLE `categories` (
 
 INSERT INTO `categories` (`id`, `name`) VALUES
 (1, 'Electronics'),
-(2, 'Cloths');
+(2, 'Cloths'),
+(3, 'Sports'),
+(4, 'Politics'),
+(5, 'Bangladesh'),
+(6, 'Economics'),
+(7, 'Space'),
+(8, 'Chosma'),
+(10, 'Airport'),
+(12, 'BNP'),
+(13, 'Bangladesh Awamileague '),
+(14, 'Yunus'),
+(15, 'Fan'),
+(16, 'Air Condition'),
+(17, 'All Shop'),
+(18, 'Shirt'),
+(19, 'Pant'),
+(20, 'Table'),
+(21, 'Chair'),
+(22, 'Keyboard');
 
 -- --------------------------------------------------------
 
@@ -93,6 +119,13 @@ CREATE TABLE `products` (
   `brand_id` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `regular_price`, `discount_price`, `image`, `short_description`, `category_id`, `brand_id`, `created_at`) VALUES
+(1, '3 Piece', 3500, 2500, '1727080145_1HKE_20240313152116.jpg', '<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\r\n', 2, 3, '2024-09-23 08:29:05');
 
 -- --------------------------------------------------------
 
@@ -166,13 +199,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `brands`
 --
 ALTER TABLE `brands`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -184,7 +217,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
