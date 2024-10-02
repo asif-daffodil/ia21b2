@@ -35,13 +35,22 @@
                         </p>
                         <!-- add to cart & view button with fontawesome icon -->
                         <a href="product.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">View <i class="fas fa-eye"></i></a>
-                        <a href="add_to_cart.php?id=<?php echo $row['id']; ?>" class="btn btn-success btn-sm">Add to cart <i class="fas fa-shopping-cart"></i></a>
+                        <button class="btn btn-success btn-sm cartBtn" data-pid="<?= $row['id']; ?>">Add to cart <i class="fas fa-shopping-cart"></i></button>
                     </div>
                 </div>
             </div>
             <?php } ?>
         </div>
     </div>
+
+    <script>
+        $(document).ready(function(){
+            $('.cartBtn').click(function(){
+                var pid = $(this).data('pid');
+                toastr.info('Product added to cart');
+            });
+        });
+    </script>
 <?php
     require_once 'footer.php';
 ?>

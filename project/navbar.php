@@ -52,9 +52,14 @@
         </div>
       </form>
     </div>
-    <a href="cart.php" class="btn btn-primary ms-2 position-relative">
-      <i class="fa-solid fa-shopping-cart"></i>
-      <span class="position-absolute start-100 top-0 bg-danger translate-middle rounded-circle small" style="width: 24px; line-height: 24px;">0</span>
-    </a>
+    <div class="dropdown-center ms-2" style="position: relative">
+      <button class="btn btn-primary dropdown-toggle position-relative" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa-solid fa-shopping-cart"></i>
+        <span class="position-absolute start-100 top-0 bg-danger translate-middle rounded-circle small" style="width: 24px; line-height: 24px;">0</span>
+      </button>
+      <div class="dropdown-menu p-3 mt-1" style="position: absolute; top: 100%; left: 100%; transform: translateX(-100%)">
+
+      </div>
+    </div>
   </div>
 </nav>
